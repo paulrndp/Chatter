@@ -1,8 +1,99 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    var userName = User.Identity.Name;
+
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="justify-content-center">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center">
+                        <img src="~/chatter.png" class="logo" />
+                        <h4 class="display-4">chatter</h4>
+                        <span>
+                            Chat Application using ASP.NET Core SignalR with User Identity
+
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header"><i class="bi bi-circle-fill text-success"></i> Online</div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active">Cras justo odio</a>
+                        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                        <a href="#" class="list-group-item list-group-item-action disabled">Morbi leo risus</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Hannah</div>
+                <div class="card-body">
+                    <div class="panel-body">
+                        <div class="chats" id="chats">
+                            <div class="chat">
+                                <div class="chat-avatar">
+                                    <a class="avatar avatar-online" data-toggle="tooltip" href="#" data-placement="right" title="" data-original-title="June Lane">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="...">
+                                        <i></i>
+                                    </a>
+                                </div>
+                                <div class="chat-body">
+                                    <div class="chat-content">
+                                        <p>
+                                            heelo friend!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat chat-left">
+                                <div class="chat-avatar">
+                                    <a class="avatar avatar-online" data-toggle="tooltip" href="#" data-placement="left" title="" data-original-title="Edward Fletcher">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="...">
+                                        <i></i>
+                                    </a>
+                                </div>
+                                <div class="chat-body">
+                                    <div class="chat-content">
+                                        <p>hello there</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="panel-footer">
+                            <form>
+                                <div class="input-group mb-3">
+                                    <input id="text" name="text" type="text" class="form-control" placeholder="Write a message...">
+                                    <input id="username" name="username" value="@userName" type="hidden">
+                                    <button id="send" class="btn btn-primary" type="button"><i class="bi bi-send"></i> Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
+
+
