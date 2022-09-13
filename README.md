@@ -8,7 +8,7 @@ A simple real-time chat application using signalR with the user identity. this c
 </div>
 
 ## 👩‍💻 Technology Used
-  <img src="https://github.com/paulrndp/Chatter/blob/master/Chatter/wwwroot/readme/techstack.png" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://github.com/paulrndp/Chatter/blob/master/Chatter/wwwroot/readme/stack.png" />&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 <br/>
