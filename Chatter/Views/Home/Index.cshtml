@@ -1,80 +1,54 @@
-﻿@{
+﻿@model IEnumerable<AppUser>
+@{
     ViewData["Title"] = "Home Page";
     var userName = User.Identity.Name;
-
 }
 
 <div class="justify-content-center">
-
     <div class="row">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card" style="border:none;">
                 <div class="card-body">
                     <div class="text-center">
                         <img src="~/chatter.png" class="logo" />
-                        <h4 class="display-4">chatter</h4>
-                        <span>
+                        <h5 class="display-5">chatter</h5>
+                        <small>
                             Chat Application using ASP.NET Core SignalR with User Identity
-
-                        </span>
+                        </small>
                     </div>
 
                 </div>
             </div>
 
         </div>
-    </div>
-    <div class="row">
+    </div><hr>
+    <div class="row p-2">
         <div class="col-md-4">
-            <div class="card">
-                <div class="card-header"><i class="bi bi-circle-fill text-success"></i> Online</div>
+            <div class="card ">
+                <div class="card-header"> List of Users</div>
                 <div class="card-body">
                     <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action active">Cras justo odio</a>
-                        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                        <a href="#" class="list-group-item list-group-item-action disabled">Morbi leo risus</a>
+                        @foreach (var item in Model)
+                        {
+                            
+                            if (item.UserName != userName)
+                            {
+                                var them = item.UserName;
+                                <a href="#" class="list-group-item list-group-item-action">@item.UserName <i class="bi bi-circle-fill text-success float-end"></i></a>
+                                ViewBag.them = item.UserName;
+                            }
+                        }
                     </div>
                 </div>
             </div>
-
         </div>
+
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Hannah</div>
+                <div class="card-header">@ViewBag.them</div>
                 <div class="card-body">
                     <div class="panel-body">
                         <div class="chats" id="chats">
-                            <div class="chat">
-                                <div class="chat-avatar">
-                                    <a class="avatar avatar-online" data-toggle="tooltip" href="#" data-placement="right" title="" data-original-title="June Lane">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="...">
-                                        <i></i>
-                                    </a>
-                                </div>
-                                <div class="chat-body">
-                                    <div class="chat-content">
-                                        <p>
-                                            heelo friend!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="chat chat-left">
-                                <div class="chat-avatar">
-                                    <a class="avatar avatar-online" data-toggle="tooltip" href="#" data-placement="left" title="" data-original-title="Edward Fletcher">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="...">
-                                        <i></i>
-                                    </a>
-                                </div>
-                                <div class="chat-body">
-                                    <div class="chat-content">
-                                        <p>hello there</p>
-                                    </div>
-                                </div>
-                            </div>
-
-
                         </div>
                     </div>
                     <div class="card-footer">
@@ -96,4 +70,4 @@
     </div>
 </div>
 
-
+<script src="~/js/site.js" asp-append-version="true"></script>
