@@ -11,8 +11,13 @@ A simple real-time chat application using signalR with the user identity. this c
   <img src="https://github.com/paulrndp/Chatter/blob/master/Chatter/wwwroot/readme/stack.png" />&nbsp;&nbsp;&nbsp;&nbsp;
 
 
-<br/>
+## 👩‍💻 Default mode
+
+Default mode is the default value for service mode SignalR resource. In this mode, this application works as a typical ASP.NET Core (or ASP.NET) SignalR application, where have a web server that hosts a hub (called hub server hereinafter) and clients can have duplex real-time communication with the hub server.
+<br><br>
+  <img src="https://docs.microsoft.com/en-us/azure/azure-signalr/media/concept-service-mode/default.png"  />&nbsp;&nbsp;&nbsp;&nbsp;
 
 ## 📸 Screenshots
   <img src="https://github.com/paulrndp/Chatter/blob/master/Chatter/wwwroot/readme/1.png"  />&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://github.com/paulrndp/Chatter/blob/master/Chatter/wwwroot/readme/2.png"  />&nbsp;&nbsp;&nbsp;&nbsp;
+
