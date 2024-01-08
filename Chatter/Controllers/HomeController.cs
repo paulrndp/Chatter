@@ -1,6 +1,7 @@
 ﻿using Chatter.Data;
 using Chatter.Hubs;
 using Chatter.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
@@ -10,6 +11,7 @@ using System.Diagnostics;
 
 namespace Chatter.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;

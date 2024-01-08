@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Chatter.Data;
 using Chatter.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Chatter.Controllers
 {
+    [Authorize]
     public class MessagesController : Controller
     {
         private readonly ApplicationDbContext _context;
